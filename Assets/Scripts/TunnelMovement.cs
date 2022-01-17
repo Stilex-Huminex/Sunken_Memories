@@ -1,28 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class TunnelMovement : MonoBehaviour
 {
-    private const float MoveSpeed = 0.05f;
+    private const float MoveSpeed = 20f;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Transform helice;
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(Vector3.forward * MoveSpeed);
-        }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(Vector3.back * MoveSpeed);
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(Vector3.up * MoveSpeed);
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            transform.Translate(Vector3.down * MoveSpeed);
-        }
+        var vel = rb.velocity;
+        var h = Input.GetAxis("Horizontal") * MoveSpeed;
+        var v = Input.GetAxis("Vertical") * MoveSpeed;
+        rb.AddForce(new Vector3(h, v, 0), ForceMode.Impulse);
+        helice.Rotate(Vector3.left, (float)Math.Sqrt(vel.x*vel.x + vel.y*vel.y)*0.2f + 4f, Space.Self);
+        rb.velocity = Vector3.ClampMagnitude(vel, 10);
     }
 }
