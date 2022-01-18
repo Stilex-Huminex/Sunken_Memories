@@ -17,7 +17,6 @@ public class Courant : MonoBehaviour
             {
                 rb.AddForce(0, 0, forwardForce * Time.deltaTime);
                 rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
-                rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
              }
         }
 }
