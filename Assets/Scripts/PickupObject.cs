@@ -10,6 +10,7 @@ public class PickupObject : MonoBehaviour
     private bool _canPickup;
     private float _startY;
 
+    
     private void Start()
     {
         _startY = transform.position.y;
@@ -17,6 +18,12 @@ public class PickupObject : MonoBehaviour
 
     public void Update()
     {
+        
+        if (PlayerPrefs.GetInt(gameObject.name) == 1)
+        {
+            gameObject.SetActive(false);
+            barrier.SetActive(false);
+        }
         var pos = transform.position;
         transform.Rotate(Vector3.up, 30f*Time.deltaTime, Space.World);
         transform.position = new Vector3(pos.x, _startY + (float) Math.Sin(Time.time*2f)/5f, pos.z);
