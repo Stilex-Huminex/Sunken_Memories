@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private Button load;
 
-    private void Awake()
+    private void OnEnable()
     {
         if (!PlayerPrefs.HasKey("LastArea"))
         {
