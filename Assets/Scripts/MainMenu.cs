@@ -35,13 +35,13 @@ public class MainMenu : MonoBehaviour
 
     public void goToOptions()
     {
+        AudioManager.Instance.PlayTrack("MossyTunnel");
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
     }
 
     public void Quitter()
     {
-        Debug.Log("QUIT WOULA!!");
         Application.Quit();
     }
 }
