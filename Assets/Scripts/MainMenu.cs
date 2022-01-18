@@ -1,27 +1,30 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject optionsMenu;
-    
-    public string SceneSauvegarde = "";
+    [SerializeField] private Button load;
+
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey("LastArea"))
+        {
+            load.interactable = false;
+        }
+    }
 
     public void NewGame()
     {
-        Debug.Log("Lance la première partie UwU WOULA!!");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("IntroScene");
     }
 
     public void LoadGame()
     {
-        Debug.Log("Continue la partie XwX WOULA!!");
-        /*if (SceneSauvegarde == "")
-        {
-            SceneManager.LoadScene(1);
-        }
-        SceneManager.LoadScene(SceneSauvegarde);*/
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastArea"));
     }
     
     public void goToMainMenu()
