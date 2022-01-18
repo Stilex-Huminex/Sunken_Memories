@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class Loader : MonoBehaviour
 {
-    [SerializeField] private Scene toLoad;
+    [SerializeField] private string toLoad;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.name.Equals("Player"))
         {
-            SceneManager.LoadScene(toLoad.buildIndex);
+            SceneManager.LoadScene(toLoad);
         }
     }
 }

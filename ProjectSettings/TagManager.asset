@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tunnel
   - Volume
+  - Popup
   layers:
   - Default
   - TransparentFX
