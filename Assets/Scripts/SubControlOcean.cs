@@ -9,7 +9,7 @@ public class SubControlOcean : MonoBehaviour
     [SerializeField] private Camera shipcamera;
 
     [SerializeField] private GameObject Helice;
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject myPlayer;
 
     [SerializeField] private float forwardSpeed = 15f, strafeSpeed = 10f;
     private float lookRateSpeed = 90f;
@@ -86,6 +86,24 @@ public class SubControlOcean : MonoBehaviour
 
             rb.AddForce(transform.forward * forwardSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime * 500);
             rb.AddForce(transform.right * strafeSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime * 500);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (isControlable)
+            {
+                rb.isKinematic = true;
+                myPlayer.transform.position = transform.position + Vector3.up * 3;
+                myPlayer.SetActive(true);
+                shipcamera.gameObject.SetActive(false);
+                ActiveControl(false);
+            }
+            else
+            {
+                rb.isKinematic = false;
+                myPlayer.SetActive(false);
+                shipcamera.gameObject.SetActive(true);
+                ActiveControl(true);
+            }
         }
       
     }
