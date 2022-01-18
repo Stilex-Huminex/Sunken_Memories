@@ -12,7 +12,7 @@ public class SeaLifeBehavior : MonoBehaviour
     [SerializeField] private List<Renderer> meshs;
     [SerializeField] private Shader shader;
     [SerializeField] private Animator anim;
-    private float _moveCd = 1.5f;
+    private float _moveCd = 1.75f;
     // Start is called before the first frame update
     private void Start()
     {
@@ -33,10 +33,9 @@ public class SeaLifeBehavior : MonoBehaviour
     private void Update()
     {
         _moveCd += Time.deltaTime;
-        if (!(_moveCd >= 2.042f)) return;
-        anim.enabled = true;
-        _moveCd -= 2.042f;
+        if (!(_moveCd >= 2.1f)) return;
+        anim.Play("Scene");
+        _moveCd -= 2.1f;
         rb.AddForce(transform.forward*-10f, ForceMode.Impulse);
-        print(rb.velocity);
     }
 }
