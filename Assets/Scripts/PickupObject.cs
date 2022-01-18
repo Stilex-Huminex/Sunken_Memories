@@ -6,19 +6,28 @@ using System;
 public class PickupObject : MonoBehaviour
 {
     public GameObject instructions;
+    public bool OK = false;
+
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) & OK )
+        {
+            FindObjectOfType<Event>().PickUp(Int32.Parse(gameObject.name));
+            
+            gameObject.SetActive(false);
+            instructions.SetActive(false);
+
+
+        }
+    }
     private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.name.Equals("Player"))
         {
             instructions.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                FindObjectOfType<Event>().PickUp(Int32.Parse(gameObject.name));
-                gameObject.SetActive(false);
-                instructions.SetActive(false);
-                
-
-            }
+            OK = true;
+            
         }
     }
     private void OnTriggerExit(Collider collider)
@@ -26,6 +35,7 @@ public class PickupObject : MonoBehaviour
         if (collider.gameObject.name.Equals("Player"))
         {
             instructions.SetActive(false);
+            OK = false;
         }
     }
 }
