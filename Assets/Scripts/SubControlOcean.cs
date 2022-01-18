@@ -80,7 +80,7 @@ public class SubControlOcean : MonoBehaviour
             }
             if(transform.position.y >= 575)
             {
-                transform.position = new Vector3(transform.position.x, 574, transform.position.z);
+                transform.position = new Vector3(transform.position.x, 575, transform.position.z);
             }
             transform.Rotate(-mouseDistance.y * lookRateSpeed * Time.deltaTime, 0, 0, Space.Self);
             //transform.Rotate(0, mouseDistance.x * lookRateSpeed * Time.deltaTime, 0, Space.Self);
