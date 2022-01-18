@@ -14,7 +14,7 @@ public class OptionsMenu : MonoBehaviour
     Resolution[] resolutions;
 
     [SerializeField] private Button effacer;
-    [SerializeField] private TextMeshPro text;
+    [SerializeField] private TextMeshProUGUI text;
 
     private void Awake()
     {
