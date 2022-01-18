@@ -30,6 +30,9 @@ public class PopupManager : MonoBehaviour
             case "Barrier":
                 text.text = "Je devrais voir ce qui se trame ici avant de partir.";
                 break;
+            case "Submarine":
+                text.text = "Appuyez sur E pour rentrer dans le sous-marin.";
+                break;
             default:
                 popup.SetActive(false);
                 popupTimer = 0;
