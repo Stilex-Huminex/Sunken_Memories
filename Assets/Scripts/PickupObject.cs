@@ -21,7 +21,7 @@ public class PickupObject : MonoBehaviour
         transform.Rotate(Vector3.up, 30f*Time.deltaTime, Space.World);
         transform.position = new Vector3(pos.x, _startY + (float) Math.Sin(Time.time*2f)/5f, pos.z);
         if (!Input.GetKeyDown(KeyCode.E) || !_canPickup) return;
-        PlayerPrefs.SetInt("Red Gem", 1);
+        PlayerPrefs.SetInt(gameObject.name, 1);
         barrier.SetActive(false);
         gameObject.SetActive(false);
     }

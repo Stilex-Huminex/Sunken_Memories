@@ -33,10 +33,10 @@ RectTransform:
   m_Father: {fileID: 3983783751264067686}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -212}
-  m_SizeDelta: {x: -418.9942, y: -576.8186}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 164}
+  m_SizeDelta: {x: 1650, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2568985369167172034
 CanvasRenderer:
@@ -148,10 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -210,8 +210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -6}
-  m_SizeDelta: {x: 229.5782, y: 30}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1497.46, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7918850154576537146
 CanvasRenderer:
@@ -242,19 +242,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: daa550d4aec4c91449bcfcbc27c64c3a, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 51
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Appuyez sur "E" pour ramasser.
+  m_Text: "Ceci est un texte de fou pour dire pas grand chose haha pourquoi je fais
+    \xE7a je sais pas je m'arr\xEAte pas tant que j'ai pas d\xE9pass\xE9 la seconde
+    ligne donc pr\xE9parez vous les zigotos"
 --- !u!1 &3993207924643584870
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88403dad7439594d9cdf03d846cd9a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 696947037234372117}
+  text: {fileID: 4225919244125928956}
 --- !u!1 &3993207925069099922
 GameObject:
   m_ObjectHideFlags: 0
