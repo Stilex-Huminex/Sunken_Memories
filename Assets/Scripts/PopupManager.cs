@@ -20,12 +20,20 @@ public class PopupManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!collision.collider.CompareTag("Popup")) return;
         popup.SetActive(true);
         popupTimer = 2;
+        print(collision.collider.name);
         switch (collision.collider.name)
         {
-            case "Gem":
-                text.text = "Appuyez sur 'E' pour ramasser.";
+            case "Red_Gem":
+                text.text = "Une gemme rouge! Elle me sera certainement utile.";
+                break;
+            case "Green_Gem":
+                text.text = "Une gemme verte! Elle me sera certainement utile.";
+                break;
+            case "Blue_Gem":
+                text.text = "Une gemme bleue! Elle me sera certainement utile.";
                 break;
             case "Barrier":
                 text.text = "Je devrais voir ce qui se trame ici avant de partir.";
