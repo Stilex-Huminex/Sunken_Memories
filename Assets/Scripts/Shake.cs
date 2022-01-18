@@ -7,11 +7,10 @@ public class Shake : MonoBehaviour
     public AnimationCurve curve;
     public float duration = 1f;
 
-    [SerializeField]
-    GameObject Player;
+
 
     // Update is called once per frame
-    public void Start()
+    public void Uwu()
     {
         StartCoroutine(Shaking());
     }
