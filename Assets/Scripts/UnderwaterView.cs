@@ -40,7 +40,7 @@ public class UnderwaterView : MonoBehaviour
 
 
             RenderSettings.fogColor = fogWater;
-            RenderSettings.fogDensity = 0.007f;
+            RenderSettings.fogDensity = 0.003f;
         }
         else
         {
