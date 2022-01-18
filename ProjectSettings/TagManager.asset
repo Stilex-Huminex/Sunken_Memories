@@ -3,16 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tunnel
+  - Volume
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - "D\xE9cor"
   - Water
   - UI
-  - 
-  - 
+  - Post Processing
+  - Nature
   - 
   - 
   - 
