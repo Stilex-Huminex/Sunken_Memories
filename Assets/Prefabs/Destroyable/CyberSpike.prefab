@@ -123,7 +123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3455316725814190501}
   - component: {fileID: 8481975019171957782}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: CyberSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3767942849023973736}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: CyberSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
