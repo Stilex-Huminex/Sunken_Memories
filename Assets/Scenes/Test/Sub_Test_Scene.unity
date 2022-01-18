@@ -332,7 +332,7 @@ Transform:
   - {fileID: 973346773}
   - {fileID: 495499425}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229006946
 MonoBehaviour:
@@ -348,6 +348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 6254953730478247652, guid: 436e0a52ba9044142949f58892ec3ea7, type: 3}
   circle: {fileID: 6273762569319368707, guid: e81705f081d96ed49892fad84bd4fdf3, type: 3}
+  medusa: {fileID: 4123837078852264152, guid: cf91ad6e670d2764bbf5042c16704160, type: 3}
+  squid: {fileID: 7642201613994025224, guid: 421bd29eb85dd814a993b5ddd62a77fd, type: 3}
   spawnPoints:
   - {fileID: 966802374}
   - {fileID: 1373221106}
@@ -479,7 +481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &417198845
 GameObject:
@@ -794,7 +796,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 37a19f492c5b6af4dae8b7ddf683b666, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a19f492c5b6af4dae8b7ddf683b666, type: 3}
       propertyPath: m_LocalScale.x
@@ -967,7 +969,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &937224635
 BoxCollider:
