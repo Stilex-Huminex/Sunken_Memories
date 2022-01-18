@@ -9,7 +9,6 @@ public class SubControlOcean : MonoBehaviour
     [SerializeField] private Camera shipcamera;
 
     [SerializeField] private GameObject Helice;
-
     [SerializeField] private GameObject Player;
 
     [SerializeField] private float forwardSpeed = 15f, strafeSpeed = 10f;
@@ -20,7 +19,7 @@ public class SubControlOcean : MonoBehaviour
     private bool rotateBool;
     private bool rotateAroundBool;
 
-    private bool isControlable = true;
+    private bool isControlable = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,5 +88,9 @@ public class SubControlOcean : MonoBehaviour
             rb.AddForce(transform.right * strafeSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime * 500);
         }
       
+    }
+    public void ActiveControl(bool active)
+    {
+        isControlable = active;
     }
 }
