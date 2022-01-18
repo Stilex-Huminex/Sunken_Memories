@@ -16,7 +16,7 @@ public class TunnelMovement : MonoBehaviour
         var pos = transform.position;
         if (hasCrashed)
         {
-            transform.position += UnityEngine.Random.insideUnitSphere * 0.1f * new Vector3(1f, 1f, 0f);
+            transform.position += UnityEngine.Random.insideUnitSphere * 0.1f;
         }
         if (!canMove)
         {
