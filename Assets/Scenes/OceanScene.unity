@@ -61909,7 +61909,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 0}
   shipcamera: {fileID: 432769000}
   Helice: {fileID: 1738589531}
-  Player: {fileID: 0}
+  myPlayer: {fileID: 0}
   forwardSpeed: 4
   strafeSpeed: 4
 --- !u!23 &3371420883247841336
@@ -62085,7 +62085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3337180421280713436}
   m_LocalRotation: {x: 0.08696328, y: 0.327953, z: -0.029988, w: 0.94020474}
-  m_LocalPosition: {x: 218.2, y: 593.6, z: 221.4}
+  m_LocalPosition: {x: 312.8, y: 573.7, z: 237}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 432768997}
@@ -63824,7 +63824,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 0}
   shipcamera: {fileID: 633748253}
   Helice: {fileID: 0}
-  Player: {fileID: 0}
+  myPlayer: {fileID: 0}
   forwardSpeed: 4
   strafeSpeed: 4
 --- !u!33 &5890572384426611728
