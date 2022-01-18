@@ -26,8 +26,8 @@ public class PopupManager : MonoBehaviour
         print(collision.collider.name);
         switch (collision.collider.name)
         {
-            case "Red_Gem":
-                text.text = "Une gemme rouge! Elle me sera certainement utile.";
+            case "Cyber_Gem":
+                text.text = "Une gemme cybernétique! Elle me sera certainement utile.";
                 break;
             case "Green_Gem":
                 text.text = "Une gemme verte! Elle me sera certainement utile.";

@@ -110,7 +110,6 @@ public class Player : MonoBehaviour
         if (playerCamera.transform.localEulerAngles.x < maxVision && playerCamera.transform.localEulerAngles.x > 180)
             playerCamera.transform.localEulerAngles = new Vector3(maxVision - 360, playerCamera.transform.localEulerAngles.y, 0);
 
-
     }
 
     private void OnCollisionEnter(Collision collision)
