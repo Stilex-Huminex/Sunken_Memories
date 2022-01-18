@@ -9,7 +9,7 @@ public class Loader : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name.Equals("Player"))
+        if (collision.collider.name.Equals("Player") || collision.collider.name.Equals("Submarine"))
         {
             SceneManager.LoadScene(toLoad);
         }
