@@ -2,40 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Threading;
 
 public class PickupObject : MonoBehaviour
 {
-    public GameObject instructions;
-    public bool OK = false;
+    [SerializeField] private GameObject barrier;
+    private bool _canPickup;
+    private float _startY;
 
+    private void Start()
+    {
+        _startY = transform.position.y;
+    }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) & OK )
-        {
-            FindObjectOfType<Event>().PickUp(Int32.Parse(gameObject.name));
-            
-            gameObject.SetActive(false);
-            instructions.SetActive(false);
-
-
-        }
+        var pos = transform.position;
+        transform.Rotate(Vector3.up, 30f*Time.deltaTime, Space.World);
+        transform.position = new Vector3(pos.x, _startY + (float) Math.Sin(Time.time*2f)/5f, pos.z);
+        if (!Input.GetKeyDown(KeyCode.E) || !_canPickup) return;
+        PlayerPrefs.SetInt("Red Gem", 1);
+        barrier.SetActive(false);
+        gameObject.SetActive(false);
     }
-    private void OnTriggerStay(Collider collider)
+    private void OnCollisionStay(Collision collisionInfo)
     {
-        if (collider.gameObject.name.Equals("Player"))
-        {
-            instructions.SetActive(true);
-            OK = true;
-            
-        }
+        if (!collisionInfo.gameObject.name.Equals("Player")) return;
+        _canPickup = true;
     }
-    private void OnTriggerExit(Collider collider)
+    private void OnCollisionExit(Collision other)
     {
-        if (collider.gameObject.name.Equals("Player"))
-        {
-            instructions.SetActive(false);
-            OK = false;
-        }
+        if (!other.gameObject.name.Equals("Player")) return;
+        _canPickup = false;
     }
 }

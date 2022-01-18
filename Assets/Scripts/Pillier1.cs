@@ -14,7 +14,7 @@ public class Pillier1 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && OK)
         {
-            FindObjectOfType<Event>().Drop(1);
+            //FindObjectOfType<Event>().Drop(1);
 
             item1.SetActive(true);
             item1.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 3, gameObject.transform.position.z);
@@ -26,7 +26,7 @@ public class Pillier1 : MonoBehaviour
     }
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.name.Equals("Player") && FindObjectOfType<Event>().Recuperer1() && !poser)
+        if (collider.gameObject.name.Equals("Player") && !poser)
         {
             instructions.SetActive(true);
             OK = true;

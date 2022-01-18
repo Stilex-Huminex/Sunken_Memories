@@ -12,7 +12,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.name.Equals("Player"))
         {
-            if (open == false & FindObjectOfType<Event>().Ouvert())
+            if (open == false)
             {
                 open = true;
                 Animator anim = door.GetComponentInChildren<Animator>();

@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
-            rb.AddForce(transform.up * Time.deltaTime * jump * mainForce, ForceMode.Impulse);
+            rb.AddForce(transform.up * jump * mainForce, ForceMode.Impulse);
         }
 
         playerCamera.transform.Rotate(Input.GetAxisRaw("Mouse Y") * -2, 0, 0);
