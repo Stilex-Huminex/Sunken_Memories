@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private Button load;
 
-    private void Awake()
+    private void OnEnable()
     {
         if (!PlayerPrefs.HasKey("LastArea"))
         {
@@ -41,7 +41,6 @@ public class MainMenu : MonoBehaviour
 
     public void Quitter()
     {
-        Debug.Log("QUIT WOULA!!");
         Application.Quit();
     }
 }

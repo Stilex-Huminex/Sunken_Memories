@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -10,8 +12,19 @@ public class OptionsMenu : MonoBehaviour
 
     public Dropdown resolutionDropdown;
     Resolution[] resolutions;
-        
-    void Start()
+
+    [SerializeField] private Button effacer;
+    [SerializeField] private TextMeshProUGUI text;
+
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey("LastArea"))
+        {
+            effacer.interactable = false;
+        }
+    }
+
+    private void Start()
     {
         resolutions = Screen.resolutions;
         
@@ -39,7 +52,7 @@ public class OptionsMenu : MonoBehaviour
     
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("musicVol", volume);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -51,5 +64,12 @@ public class OptionsMenu : MonoBehaviour
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+
+    public void DeleteSave()
+    {
+        PlayerPrefs.DeleteAll();
+        effacer.interactable = false;
+        text.text = "Données effacées.";
     }
 }

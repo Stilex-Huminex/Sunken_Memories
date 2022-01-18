@@ -12,7 +12,7 @@ public class SeaLifeBehavior : MonoBehaviour
     [SerializeField] private List<Renderer> meshs;
     [SerializeField] private Shader shader;
     [SerializeField] private Animator anim;
-    private float _moveCd = 1.75f;
+    private float _moveCd;
     private bool move;
     private float totalRota;
 
@@ -20,6 +20,7 @@ public class SeaLifeBehavior : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        _moveCd = Random.Range(1f, 3f);
         var x = Random.Range(0, 360);
         var y = Random.Range(0, 360);
         var z = Random.Range(0, 360);
