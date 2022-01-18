@@ -10,11 +10,10 @@ public class SubControlOcean : MonoBehaviour
 
     [SerializeField] private GameObject Helice;
 
-    [SerializeField] private float forwardSpeed = 15f, strafeSpeed = 10f, hoverSpeed = 100f;
+    [SerializeField] private float forwardSpeed = 15f, strafeSpeed = 10f;
     private float lookRateSpeed = 90f;
     private Vector2 lookInput, screenCenter, mouseDistance;
     private float rollInput;
-    private float rollSpeed = 50f, rollAcceleration = 3.5f;
 
     private bool rotateBool;
     private bool rotateAroundBool;
