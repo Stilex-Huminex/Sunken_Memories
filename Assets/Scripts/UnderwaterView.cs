@@ -14,6 +14,7 @@ public class UnderwaterView : MonoBehaviour
     [SerializeField] private GameObject downWater;
 
     [SerializeField] private GameObject cameraPlayer;
+    [SerializeField] private GameObject cameraSubmarine;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class UnderwaterView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cameraPlayer.transform.position.y < 575)
+        if(cameraPlayer.transform.position.y < 575 || cameraSubmarine.transform.position.y < 575)
         {
             downWater.SetActive(true);
             postWater.SetActive(true);
