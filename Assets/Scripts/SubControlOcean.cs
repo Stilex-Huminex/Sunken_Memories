@@ -9,8 +9,7 @@ public class SubControlOcean : MonoBehaviour
     [SerializeField] private Camera shipcamera;
 
     [SerializeField] private GameObject Helice;
-
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject myPlayer;
 
     [SerializeField] private float forwardSpeed = 15f, strafeSpeed = 10f;
     private float lookRateSpeed = 90f;
@@ -20,7 +19,7 @@ public class SubControlOcean : MonoBehaviour
     private bool rotateBool;
     private bool rotateAroundBool;
 
-    private bool isControlable = true;
+    private bool isControlable = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,7 +78,10 @@ public class SubControlOcean : MonoBehaviour
                 mouseDistance.x = (lookInput.x - screenCenter.x) / screenCenter.y;
                 mouseDistance.y = (lookInput.y - screenCenter.y) / screenCenter.y;
             }
-
+            if(transform.position.y >= 576)
+            {
+                transform.position = new Vector3(transform.position.x, 576, transform.position.z);
+            }
             transform.Rotate(-mouseDistance.y * lookRateSpeed * Time.deltaTime, 0, 0, Space.Self);
             //transform.Rotate(0, mouseDistance.x * lookRateSpeed * Time.deltaTime, 0, Space.Self);
             transform.Rotate(0, mouseDistance.x * lookRateSpeed * Time.deltaTime, 0, Space.World);
@@ -88,6 +90,28 @@ public class SubControlOcean : MonoBehaviour
             rb.AddForce(transform.forward * forwardSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime * 500);
             rb.AddForce(transform.right * strafeSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime * 500);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (isControlable)
+            {
+                rb.isKinematic = true;
+                myPlayer.transform.position = transform.position + Vector3.up * 3;
+                myPlayer.SetActive(true);
+                shipcamera.gameObject.SetActive(false);
+                ActiveControl(false);
+            }
+            else
+            {
+                rb.isKinematic = false;
+                myPlayer.SetActive(false);
+                shipcamera.gameObject.SetActive(true);
+                ActiveControl(true);
+            }
+        }
       
+    }
+    public void ActiveControl(bool active)
+    {
+        isControlable = active;
     }
 }
