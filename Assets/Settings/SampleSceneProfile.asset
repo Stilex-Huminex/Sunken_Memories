@@ -16,11 +16,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.6
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 3.08
+    m_Value: 1
     min: 0
   scatter:
     m_OverrideState: 0
@@ -68,7 +68,11 @@ MonoBehaviour:
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: {r: 0.3160377, g: 0.7757275, b: 1, a: 1}
+=======
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -77,7 +81,11 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
+<<<<<<< Updated upstream
     m_Value: 0.458
+=======
+    m_Value: 0.295
+>>>>>>> Stashed changes
     min: 0
     max: 1
   smoothness:
