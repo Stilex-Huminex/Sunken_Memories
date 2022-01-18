@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3294156135553814893, guid: 1f997a0c65fe10f478b33bd12190b37f, type: 3}
       propertyPath: nbSpawns
-      value: 100
+      value: 742
       objectReference: {fileID: 0}
     - target: {fileID: 4997700114976643737, guid: 1f997a0c65fe10f478b33bd12190b37f, type: 3}
       propertyPath: m_Layer

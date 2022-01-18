@@ -37,8 +37,7 @@ public class SeaLifeBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (move && totalRota < 180f) transform.Rotate(0, Time.deltaTime * 10, 0, Space.Self);
-        totalRota += Time.deltaTime * 10;
+        if (move && totalRota < 180f) transform.Rotate(0, Time.deltaTime * 100, 0, Space.Self);
         _moveCd += Time.deltaTime;
         if (!(_moveCd >= 2.1f)) return;
         anim.Play("Scene");
@@ -57,7 +56,6 @@ public class SeaLifeBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!other.name.Equals("Spawner")) return;
-        move = false;
         move = false;
     }
 }
