@@ -7,19 +7,19 @@ public class TunnelManager : MonoBehaviour
 {
     [SerializeField] private Text speed;
     [SerializeField] private Slider progress;
-    private float distance;
+    private float _distance;
 
     private void Awake()
     {
-        distance = 0;
+        _distance = 0;
     }
 
     public void Update()
     {
-        distance += TunnelMovement.TravelSpeed;
-        if (distance > 1000) SceneManager.LoadScene("TerrainTest");
+        _distance += TunnelMovement.TravelSpeed;
+        if (_distance > 5000) SceneManager.LoadScene("TerrainTest");
         var nb = (int)(TunnelMovement.TravelSpeed * 200);
         speed.text = nb + " km/h";
-        progress.value = distance / 1000;
+        progress.value = _distance / 5000;
     }
 }

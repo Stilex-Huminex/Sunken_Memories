@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 4fe748159517f8b44887f043fd16355f, type: 2}
   m_Color: {r: 0, g: 0.15374309, b: 0.6415094, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -320,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229006941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100.5}
+  m_LocalPosition: {x: 0, y: 0, z: 145}
   m_LocalScale: {x: 43.47, y: 26.57, z: 1}
   m_Children:
   - {fileID: 966802374}
@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 6254953730478247652, guid: 436e0a52ba9044142949f58892ec3ea7, type: 3}
+  circle: {fileID: 6273762569319368707, guid: e81705f081d96ed49892fad84bd4fdf3, type: 3}
   spawnPoints:
   - {fileID: 966802374}
   - {fileID: 1373221106}
@@ -356,6 +357,7 @@ MonoBehaviour:
   - {fileID: 233453059}
   - {fileID: 973346773}
   - {fileID: 495499425}
+  - {fileID: 229006945}
 --- !u!1 &233453058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1069,7 @@ RectTransform:
   m_GameObject: {fileID: 988385662}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 0.75, z: 1}
+  m_LocalScale: {x: 5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 544753736}
   m_RootOrder: 0
@@ -1097,8 +1099,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d3924d3b041a7864ab799591f5cfd902, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1295,7 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: b429b3b09c676c94fb28225de9bf5de5, type: 2}
   m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1304,7 +1306,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
