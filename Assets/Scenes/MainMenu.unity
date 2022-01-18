@@ -1235,7 +1235,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 98836eff93751de4d9f07297dff1d4c8, type: 2}
   resolutionDropdown: {fileID: 491344542}
   effacer: {fileID: 219405506}
-  text: {fileID: 0}
+  text: {fileID: 1987052890}
 --- !u!1 &608814336
 GameObject:
   m_ObjectHideFlags: 0
