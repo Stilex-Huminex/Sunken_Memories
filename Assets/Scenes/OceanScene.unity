@@ -3408,7 +3408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dcdfcb1f813fcc044b2d8a73319f43e1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dcdfcb1f813fcc044b2d8a73319f43e1, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4059,7 +4059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -480865354744158047, guid: 63ff7cb4a16a5cd4b97bfadd580ea6a9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -480865354744158047, guid: 63ff7cb4a16a5cd4b97bfadd580ea6a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4071,7 +4071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8521902485874960664, guid: 63ff7cb4a16a5cd4b97bfadd580ea6a9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8521902485874960664, guid: 63ff7cb4a16a5cd4b97bfadd580ea6a9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9748,7 +9748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: db31a2317cf13154db28dfdc5752c219, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: db31a2317cf13154db28dfdc5752c219, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -88693,6 +88693,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1595962195786657463, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_Name
+      value: Snow_Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595962195786657463, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718855793103429847, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_Name
+      value: Cyber_Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718855793103429847, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3941457039631531666, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_Name
       value: Temple
@@ -88740,6 +88756,14 @@ PrefabInstance:
     - target: {fileID: 4465616894606664744, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956599464641264655, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_Name
+      value: Green_Gem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956599464641264655, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}

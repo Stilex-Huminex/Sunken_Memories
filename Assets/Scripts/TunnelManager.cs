@@ -18,7 +18,7 @@ public class TunnelManager : MonoBehaviour
     public void Update()
     {
         _distance += TunnelMovement.TravelSpeed;
-        if (_distance > 3500 || Input.GetKeyDown(KeyCode.PageUp)) SceneManager.LoadScene(nextScene);
+        if (_distance > 3500) SceneManager.LoadScene(nextScene);
         var nb = (int)(TunnelMovement.TravelSpeed * 200);
         speed.text = nb + " km/h";
         progress.value = _distance / 3500;
