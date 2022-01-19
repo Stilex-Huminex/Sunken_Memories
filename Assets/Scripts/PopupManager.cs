@@ -73,6 +73,9 @@ public class PopupManager : MonoBehaviour
                 break;
             case "Portail":
                 text.text = "Il semblerait que quelque chose aie bougé un peu plus loin.";
+            case "Pillier":
+                text.text = "Il y'a 3 pilliers ici ... J'ai l'impression qu'il faut placer des objets dessus.";
+                collision.enabled = false;
                 popupTimer = 6;
                 break;
             default:
