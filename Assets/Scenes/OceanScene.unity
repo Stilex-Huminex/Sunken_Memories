@@ -78311,7 +78311,7 @@ GameObject:
   - component: {fileID: 3337180421280713440}
   m_Layer: 0
   m_Name: Submarine
-  m_TagString: Untagged
+  m_TagString: Popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83568,6 +83568,10 @@ PrefabInstance:
     - target: {fileID: 3993207924848020853, guid: e0ccbb2a2eb21c440a60cf120f811342, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993207924848020853, guid: e0ccbb2a2eb21c440a60cf120f811342, type: 3}
+      propertyPath: m_TagString
+      value: Popup
       objectReference: {fileID: 0}
     - target: {fileID: 3993207924848020854, guid: e0ccbb2a2eb21c440a60cf120f811342, type: 3}
       propertyPath: jump
