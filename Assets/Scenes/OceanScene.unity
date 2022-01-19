@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d0abdd05e035f429d76f627bb9d6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toLoad: Credits
+  toLoad: FinalScene
 --- !u!65 &19423617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93611,6 +93611,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6446211798771755578, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c791a207fa10f149924f09e2558cb6e, type: 2}
     - target: {fileID: 6956599464641264655, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_Name
       value: Green_Gem
