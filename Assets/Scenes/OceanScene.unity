@@ -93535,6 +93535,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3116279222223590111, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: barrier
+      value: 
+      objectReference: {fileID: 1928378274}
     - target: {fileID: 3718855793103429847, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_Name
       value: Cyber_Gem
@@ -93547,6 +93551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Temple
       objectReference: {fileID: 0}
+    - target: {fileID: 3994824806843176949, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: barrier
+      value: 
+      objectReference: {fileID: 1358281065}
     - target: {fileID: 4465616894606664744, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -93591,6 +93599,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5385292281436980300, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: barrier
+      value: 
+      objectReference: {fileID: 720749041}
     - target: {fileID: 5889630342612980255, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_Name
       value: Portail
