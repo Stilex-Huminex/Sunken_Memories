@@ -27,7 +27,7 @@ public class ObstacleSpawner : MonoBehaviour
             var clone = Instantiate(toClone, pos, Quaternion.identity);
             clone.GetComponent<ObstacleMovement>().enabled = true;
         }
-        if (!(timeToSpawn >= 0.2f/TunnelMovement.TravelSpeed)) return;
+        if (!(timeToSpawn >= 0.2f/TunnelMovement.TravelSpeed*Time.deltaTime*15f)) return;
         timeToSpawn -= 0.2f/TunnelMovement.TravelSpeed;
         var spawn = Random.Range(0, spawnPoints.Count);
         if (spawn < spawnPoints.Count - 1)

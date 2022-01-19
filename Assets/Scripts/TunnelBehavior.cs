@@ -17,8 +17,8 @@ public class TunnelBehavior : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector3.back*TunnelMovement.TravelSpeed);
-        other.Translate(Vector3.back*TunnelMovement.TravelSpeed);
+        transform.Translate(Vector3.back*TunnelMovement.TravelSpeed*Time.deltaTime*450f);
+        other.Translate(Vector3.back*TunnelMovement.TravelSpeed*Time.deltaTime*450f);
         if (!(other.position.z < _startZ)) return;
         transform.Translate(Vector3.forward*_diff);
         other.Translate(Vector3.forward*_diff);
