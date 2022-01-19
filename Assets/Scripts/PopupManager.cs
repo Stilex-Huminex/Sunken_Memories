@@ -42,6 +42,21 @@ public class PopupManager : MonoBehaviour
             case "Submarine":
                 text.text = "Appuyez sur E pour rentrer dans le sous-marin.";
                 break;
+            case "Debut":
+                text.text = "Je suis bloqué ici ... Il faut que je trouve un moyen de rentrer chez moi.";
+                collision.enabled = false;
+                popupTimer = 7;
+                break;
+            case "Plage":
+                text.text = "Mon sous marin a fini dans l'eau ! Je vais vérifier s'il est toujours en état de marche.";
+                collision.enabled = false;
+                popupTimer = 6;
+                break;
+            case "Courant":
+                text.text = "Les courants marins ont l'air d'amener quelque part.";
+                collision.enabled = false;
+                popupTimer = 6;
+                break;
             default:
                 popup.SetActive(false);
                 popupTimer = 0;
