@@ -57,6 +57,11 @@ public class PopupManager : MonoBehaviour
                 collision.enabled = false;
                 popupTimer = 6;
                 break;
+            case "Tunnel":
+                text.text = "Cela m'a amené a un passage ! C'est surement un tunnel pour ma liberté !";
+                collision.enabled = false;
+                popupTimer = 6;
+                break;
             default:
                 popup.SetActive(false);
                 popupTimer = 0;
