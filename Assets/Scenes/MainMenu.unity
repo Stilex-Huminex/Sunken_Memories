@@ -3562,6 +3562,9 @@ MonoBehaviour:
   source: {fileID: 1908735324}
   clips:
   - {fileID: 8300000, guid: d588726a2259e304cb9282dd5a14387d, type: 3}
+  - {fileID: 8300000, guid: d6ea4d14cd0287042b2556a28e04bec0, type: 3}
+  - {fileID: 8300000, guid: 1b7c9067377d82e4f83cf36d63cfffd8, type: 3}
+  - {fileID: 8300000, guid: 8cc4428c416f84847bbc82a8565ecc58, type: 3}
   - {fileID: 8300000, guid: 32dd7a4d2a5294c479e5fcbdad4c8387, type: 3}
   - {fileID: 8300000, guid: 03ad62ec0c6f7c347971632b5ec65477, type: 3}
   - {fileID: 8300000, guid: 32a1081e3ec491e4ea14555c692e7114, type: 3}
