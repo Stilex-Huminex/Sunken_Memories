@@ -54,9 +54,9 @@ public class SubControlOcean : MonoBehaviour
         screenCenter.x = Screen.width * 0.5f;
         screenCenter.y = Screen.height * 0.5f;
 
-        //Cursor.visible = false;
+        
         Cursor.lockState = CursorLockMode.Confined;
-        //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     // Update is called once per frame
@@ -64,6 +64,7 @@ public class SubControlOcean : MonoBehaviour
     {
         if (isControlable)
         {
+            Cursor.visible = true;
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 Cursor.visible = true;
@@ -114,6 +115,10 @@ public class SubControlOcean : MonoBehaviour
 
             rb.AddForce(transform.forward * forwardSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime * 500);
             rb.AddForce(transform.right * strafeSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime * 500);
+        }
+        else
+        {
+            Cursor.visible = false;
         }
         if (Input.GetKeyDown(KeyCode.E) && _canControl)
         {

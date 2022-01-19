@@ -99114,7 +99114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1482263579077525340}
-  cursorTexture: {fileID: 0}
+  cursorTexture: {fileID: 2800000, guid: facd31c56d394854d9d9a42413c97da3, type: 3}
   shipcamera: {fileID: 432769000}
   Helice: {fileID: 1738589531}
   myPlayer: {fileID: 571092315}
