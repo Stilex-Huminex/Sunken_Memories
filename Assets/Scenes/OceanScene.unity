@@ -93527,6 +93527,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1421521236019100675, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 934856672}
+    - target: {fileID: 1421521236019100675, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: toRemove
+      value: 
+      objectReference: {fileID: 720749041}
+    - target: {fileID: 1421521236019100675, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: portailCollider
+      value: 
+      objectReference: {fileID: 1435659547187182928}
     - target: {fileID: 1595962195786657463, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_Name
       value: Snow_Gem
@@ -93611,6 +93623,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5902018928761042222, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 934856672}
+    - target: {fileID: 5902018928761042222, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: toRemove
+      value: 
+      objectReference: {fileID: 1928378274}
+    - target: {fileID: 5902018928761042222, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: portailCollider
+      value: 
+      objectReference: {fileID: 1435659547187182928}
     - target: {fileID: 6446211798771755578, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -93623,8 +93647,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7182327368850118307, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 934856672}
+    - target: {fileID: 7182327368850118307, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: toRemove
+      value: 
+      objectReference: {fileID: 1358281065}
+    - target: {fileID: 7182327368850118307, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+      propertyPath: portailCollider
+      value: 
+      objectReference: {fileID: 1435659547187182928}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+--- !u!65 &1435659547187182928 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 7684857570850605943, guid: 0dd9e6d8cc72634429efb1aa5f644a75, type: 3}
+  m_PrefabInstance: {fileID: 1435659547187182927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &1467420318920325391
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class Pillar : MonoBehaviour
         PlayerPrefs.SetInt(myGem, 0);
         PlayerPrefs.SetInt(myGem + "_done", 1);
         gem.SetActive(true);
+        toRemove.SetActive(false);
         if (PlayerPrefs.GetInt("Cyber_Gem_done") != 1 || PlayerPrefs.GetInt("Snow_Gem_done") != 1 ||
             PlayerPrefs.GetInt("Green_Gem_done") != 1) return;
         portailCollider.enabled = true;
