@@ -17,6 +17,7 @@ public class Pillar : MonoBehaviour
     [SerializeField] private Gems gemme;
     [SerializeField] private BoxCollider portailCollider;
     [SerializeField] private Shake anim;
+    [SerializeField] private GameObject toRemove;
 
     private void Start()
     {

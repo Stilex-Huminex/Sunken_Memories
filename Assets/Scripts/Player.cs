@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
 
 
 
-    private bool canJump = true;
+    private bool canJump = false;
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(Player))]

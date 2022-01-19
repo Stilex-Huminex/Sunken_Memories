@@ -28,17 +28,23 @@ public class SubControlOcean : MonoBehaviour
 
     private bool _canControl;
 
-    private void Awake()
+    private void OnEnable()
     {
         Vector3 oldPos = transform.position;
-        print(PlayerPrefs.GetString("PreviousArea", "zob"));
-        transform.position = PlayerPrefs.GetString("PreviousArea", "zob") switch
+        print("Ancien : " + PlayerPrefs.GetString("PreviousArea", "zob"));
+        var where = PlayerPrefs.GetString("PreviousArea", "zob");
+        if (where.StartsWith("Mossy"))
         {
-            "MossyCave" => moss.position,
-            "CyberCave" => cyber.position,
-            "IcyCave" => ice.position,
-            _ => transform.position
-        };
+            transform.position = moss.position;
+        }
+        else if (where.StartsWith("Cyber"))
+        {
+            transform.position = cyber.position;
+        }
+        else if (where.StartsWith("Icy"))
+        {
+            transform.position = ice.position;
+        }
         if (!oldPos.Equals(transform.position))
         {
             _canControl = true;
