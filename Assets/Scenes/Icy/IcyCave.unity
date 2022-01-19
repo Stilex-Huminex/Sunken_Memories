@@ -10320,7 +10320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &659302918
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25509,6 +25509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799609503}
   - component: {fileID: 1799609500}
+  - component: {fileID: 1799609501}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Popup
@@ -25524,10 +25525,24 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799609499}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5999736
   m_Height: 2.5786073
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1799609501
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799609499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1799609503
@@ -26082,7 +26097,7 @@ Transform:
   - {fileID: 196320919}
   - {fileID: 1932247890}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919132147558400628
 GameObject:
@@ -26110,9 +26125,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147558400628}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.26
+  m_Radius: 0.3
   m_Height: 2.04
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.01}
