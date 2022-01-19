@@ -48,7 +48,7 @@ public class PopupManager : MonoBehaviour
                 popupTimer = 7;
                 break;
             case "Plage":
-                text.text = "Mon sous marin a fini dans l'eau ! Je vais vérifier s'il est toujours en état de marche.";
+                text.text = "Mon sous-marin a fini dans l'eau ! Je vais vérifier s'il est toujours en état de marche.";
                 collision.enabled = false;
                 popupTimer = 6;
                 break;
@@ -58,7 +58,7 @@ public class PopupManager : MonoBehaviour
                 popupTimer = 6;
                 break;
             case "Tunnel":
-                text.text = "Cela m'a amené a un passage ! C'est surement un tunnel pour ma liberté !";
+                text.text = "Cela m'a amené à un passage ! C'est sûrement un tunnel pour ma liberté !";
                 collision.enabled = false;
                 popupTimer = 6;
                 break;
@@ -72,7 +72,7 @@ public class PopupManager : MonoBehaviour
                 text.text = "On dirait que je peux placer une gemme verte ici.";
                 break;
             case "Portail":
-                text.text = "Il semblerait que quelque chose aie bougé un peu plus loin.";
+                text.text = "Il semblerait que quelque chose ait bougé un peu plus loin.";
                 popupTimer = 6;
                 break;
             default:
