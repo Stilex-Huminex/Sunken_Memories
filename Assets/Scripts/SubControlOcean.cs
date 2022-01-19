@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class SubControlOcean : MonoBehaviour
 
     [SerializeField] private GameObject Helice;
     [SerializeField] private GameObject myPlayer;
+    [SerializeField] private ParticleSystem particle;
 
     [SerializeField] private float forwardSpeed = 15f, strafeSpeed = 10f;
     private float lookRateSpeed = 90f;
@@ -19,7 +21,9 @@ public class SubControlOcean : MonoBehaviour
     private bool rotateBool;
     private bool rotateAroundBool;
 
-    private bool isControlable = false;
+    private bool isControlable ;
+
+    private bool _canControl;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,7 +94,7 @@ public class SubControlOcean : MonoBehaviour
             rb.AddForce(transform.forward * forwardSpeed * Input.GetAxisRaw("Vertical") * Time.deltaTime * 500);
             rb.AddForce(transform.right * strafeSpeed * Input.GetAxisRaw("Horizontal") * Time.deltaTime * 500);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && _canControl)
         {
             if (isControlable)
             {
@@ -99,6 +103,8 @@ public class SubControlOcean : MonoBehaviour
                 myPlayer.SetActive(true);
                 shipcamera.gameObject.SetActive(false);
                 ActiveControl(false);
+                particle.Play();
+                transform.eulerAngles = Vector3.zero;
             }
             else
             {
@@ -106,6 +112,7 @@ public class SubControlOcean : MonoBehaviour
                 myPlayer.SetActive(false);
                 shipcamera.gameObject.SetActive(true);
                 ActiveControl(true);
+                particle.Stop();
             }
         }
       
@@ -113,5 +120,17 @@ public class SubControlOcean : MonoBehaviour
     public void ActiveControl(bool active)
     {
         isControlable = active;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.name.Equals("Player")) return;
+        _canControl = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.name.Equals("Player")) return;
+        _canControl = false;
     }
 }
