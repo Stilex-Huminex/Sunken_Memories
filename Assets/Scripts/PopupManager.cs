@@ -20,7 +20,7 @@ public class PopupManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-
+        
         if (!collision.CompareTag("Popup")) return;
         popup.SetActive(true);
         popupTimer = 2;
