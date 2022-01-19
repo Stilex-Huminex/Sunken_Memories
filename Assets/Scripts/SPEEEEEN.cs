@@ -14,7 +14,6 @@ public class SPEEEEEN : MonoBehaviour
         zob.enabled = true;
         zob2.enabled = true;
     }
-
     private void Update()
     {
         transform.Rotate(Vector3.up, Time.deltaTime*175, Space.World);

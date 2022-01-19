@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Pillar : MonoBehaviour
 {
-    enum gems
+    private enum Gems
     {
-        Red_Gem,
-        Green_Gem,
-        Blue_Gem
+        Cyber_Gem,
+        Snow_Gem,
+        Green_Gem
     }
     
     public GameObject gem;
 
-    [SerializeField] private gems gemme;
+    [SerializeField] private Gems gemme;
     
     private bool _canPut;
 
@@ -25,14 +25,14 @@ public class Pillar : MonoBehaviour
         PlayerPrefs.SetInt(myGem + "_done", 1);
         gem.SetActive(true);
     }
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerStay(Collider colliderInfo)
     {
-        if (!collider.gameObject.name.Equals("Player")) return;
+        if (!colliderInfo.gameObject.name.Equals("Player")) return;
         _canPut = true;
     }
-    private void OnTriggerExit(Collider collider)
+    private void OnTriggerExit(Collider colliderInfo)
     {
-        if (!collider.gameObject.name.Equals("Player")) return;
+        if (!colliderInfo.gameObject.name.Equals("Player")) return;
         _canPut = false;
     }
 }
