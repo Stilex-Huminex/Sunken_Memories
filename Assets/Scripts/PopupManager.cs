@@ -52,6 +52,11 @@ public class PopupManager : MonoBehaviour
                 collision.enabled = false;
                 popupTimer = 6;
                 break;
+            case "Courant":
+                text.text = "Les courants marins ont l'air d'amener quelque part.";
+                collision.enabled = false;
+                popupTimer = 6;
+                break;
             default:
                 popup.SetActive(false);
                 popupTimer = 0;
