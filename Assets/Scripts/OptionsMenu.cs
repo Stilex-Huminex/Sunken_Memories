@@ -65,11 +65,4 @@ public class OptionsMenu : MonoBehaviour
     {
         Screen.fullScreen = isFullScreen;
     }
-
-    public void DeleteSave()
-    {
-        PlayerPrefs.DeleteAll();
-        effacer.interactable = false;
-        text.text = "Données effacées.";
-    }
 }
