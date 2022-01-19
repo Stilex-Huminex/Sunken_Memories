@@ -36071,7 +36071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313416594}
   m_Layer: 0
-  m_Name: BlackHole
+  m_Name: CyberHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54470,7 +54470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741832514}
   m_Layer: 0
-  m_Name: BlackHole (1)
+  m_Name: MossyHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54676,7 +54676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764884260}
   m_Layer: 0
-  m_Name: BlackHole (2)
+  m_Name: IcyHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83215,6 +83215,9 @@ MonoBehaviour:
   particle: {fileID: 3337180421280713439}
   forwardSpeed: 4
   strafeSpeed: 4
+  moss: {fileID: 1741832514}
+  cyber: {fileID: 1313416594}
+  ice: {fileID: 1764884260}
 --- !u!199 &3337180421280713438
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -89980,6 +89983,9 @@ MonoBehaviour:
   particle: {fileID: 0}
   forwardSpeed: 4
   strafeSpeed: 4
+  moss: {fileID: 0}
+  cyber: {fileID: 0}
+  ice: {fileID: 0}
 --- !u!33 &5890572384426611728
 MeshFilter:
   m_ObjectHideFlags: 0

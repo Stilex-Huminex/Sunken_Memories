@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class SubControlOcean : MonoBehaviour
@@ -18,14 +19,35 @@ public class SubControlOcean : MonoBehaviour
     private Vector2 lookInput, screenCenter, mouseDistance;
     private float rollInput;
 
+    [SerializeField] private Transform moss, cyber, ice;
+    
     private bool rotateBool;
     private bool rotateAroundBool;
 
     private bool isControlable ;
 
     private bool _canControl;
+
+    private void Awake()
+    {
+        Vector3 oldPos = transform.position;
+        print(PlayerPrefs.GetString("PreviousArea", "zob"));
+        transform.position = PlayerPrefs.GetString("PreviousArea", "zob") switch
+        {
+            "MossyCave" => moss.position,
+            "CyberCave" => cyber.position,
+            "IcyCave" => ice.position,
+            _ => transform.position
+        };
+        if (!oldPos.Equals(transform.position))
+        {
+            _canControl = true;
+            Swap();
+        }
+    }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
         rb.transform.InverseTransformVector(rb.velocity);
@@ -38,7 +60,7 @@ public class SubControlOcean : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (isControlable)
         {
@@ -69,7 +91,6 @@ public class SubControlOcean : MonoBehaviour
                 lookInput.x = 0;
                 lookInput.y = 0;
                 Cursor.Equals(0, 0);
-
             }
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
@@ -96,24 +117,7 @@ public class SubControlOcean : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && _canControl)
         {
-            if (isControlable)
-            {
-                rb.isKinematic = true;
-                myPlayer.transform.position = transform.position + Vector3.up * 3;
-                myPlayer.SetActive(true);
-                shipcamera.gameObject.SetActive(false);
-                ActiveControl(false);
-                particle.Play();
-                transform.eulerAngles = Vector3.zero;
-            }
-            else
-            {
-                rb.isKinematic = false;
-                myPlayer.SetActive(false);
-                shipcamera.gameObject.SetActive(true);
-                ActiveControl(true);
-                particle.Stop();
-            }
+            Swap();
         }
       
     }
@@ -132,5 +136,27 @@ public class SubControlOcean : MonoBehaviour
     {
         if (!other.name.Equals("Player")) return;
         _canControl = false;
+    }
+
+    private void Swap()
+    {
+        if (isControlable)
+        {
+            rb.isKinematic = true;
+            myPlayer.transform.position = transform.position + Vector3.up * 3;
+            myPlayer.SetActive(true);
+            shipcamera.gameObject.SetActive(false);
+            ActiveControl(false);
+            particle.Play();
+            transform.eulerAngles = Vector3.zero;
+        }
+        else
+        {
+            rb.isKinematic = false;
+            myPlayer.SetActive(false);
+            shipcamera.gameObject.SetActive(true);
+            ActiveControl(true);
+            particle.Stop();
+        }
     }
 }
