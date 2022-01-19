@@ -17,8 +17,14 @@ public class Pillar : MonoBehaviour
     [SerializeField] private Gems gemme;
     [SerializeField] private BoxCollider portailCollider;
     [SerializeField] private Shake anim;
-    
-    
+
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("Cyber_Gem_done") != 1 || PlayerPrefs.GetInt("Snow_Gem_done") != 1 ||
+            PlayerPrefs.GetInt("Green_Gem_done") != 1) return;
+        portailCollider.gameObject.SetActive(false);
+    }
+
     private bool _canPut;
     public void Update()
     {
