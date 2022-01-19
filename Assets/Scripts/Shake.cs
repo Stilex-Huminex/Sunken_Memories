@@ -6,6 +6,7 @@ public class Shake : MonoBehaviour
 {
     public AnimationCurve curve;
     public float duration = 1f;
+    [SerializeField] private Player player;
 
 
 
@@ -16,6 +17,7 @@ public class Shake : MonoBehaviour
     }
     IEnumerator Shaking()
     {
+        player.enabled = false;
         Vector3 startPosition = transform.position;
         float elapsedTime = 0f;
         
@@ -26,7 +28,7 @@ public class Shake : MonoBehaviour
             transform.position = startPosition + Random.insideUnitSphere * strength;
             yield return null;
         }
-
         transform.position = startPosition;
+        player.enabled = true;
     }
 }

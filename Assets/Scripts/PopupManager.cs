@@ -62,6 +62,19 @@ public class PopupManager : MonoBehaviour
                 collision.enabled = false;
                 popupTimer = 6;
                 break;
+            case "Cyber_Gem_Pillar":
+                text.text = "On dirait que je peux placer une gemme rouge ici.";
+                break;
+            case "Snow_Gem_Pillar":
+                text.text = "On dirait que je peux placer une gemme bleue ici.";
+                break;
+            case "Green_Gem_Pillar":
+                text.text = "On dirait que je peux placer une gemme verte ici.";
+                break;
+            case "Portail":
+                text.text = "Il semblerait que quelque chose aie bougé un peu plus loin.";
+                popupTimer = 6;
+                break;
             default:
                 popup.SetActive(false);
                 popupTimer = 0;

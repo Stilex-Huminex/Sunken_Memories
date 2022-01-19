@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,11 @@ public class Pillar : MonoBehaviour
     public GameObject gem;
 
     [SerializeField] private Gems gemme;
+    [SerializeField] private BoxCollider portailCollider;
+    [SerializeField] private Shake anim;
+    
     
     private bool _canPut;
-
     public void Update()
     {
         var myGem = gemme.ToString();
@@ -24,6 +27,12 @@ public class Pillar : MonoBehaviour
         PlayerPrefs.SetInt(myGem, 0);
         PlayerPrefs.SetInt(myGem + "_done", 1);
         gem.SetActive(true);
+        if (PlayerPrefs.GetInt("Cyber_Gem_done") != 1 || PlayerPrefs.GetInt("Snow_Gem_done") != 1 ||
+            PlayerPrefs.GetInt("Green_Gem_done") != 1) return;
+        portailCollider.enabled = true;
+        portailCollider.gameObject.SetActive(false);
+        anim.Uwu();
+        enabled = false;
     }
     private void OnTriggerStay(Collider colliderInfo)
     {
