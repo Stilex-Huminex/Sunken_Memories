@@ -62,6 +62,11 @@ public class PopupManager : MonoBehaviour
                 collision.enabled = false;
                 popupTimer = 6;
                 break;
+            case "Pillier":
+                text.text = "Il y'a 3 pilliers ici ... J'ai l'impression qu'il faut placer des objets dessus.";
+                collision.enabled = false;
+                popupTimer = 6;
+                break;
             default:
                 popup.SetActive(false);
                 popupTimer = 0;
