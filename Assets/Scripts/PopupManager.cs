@@ -18,13 +18,14 @@ public class PopupManager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (!collision.collider.CompareTag("Popup")) return;
+        
+        if (!collision.CompareTag("Popup")) return;
         popup.SetActive(true);
         popupTimer = 2;
-        print(collision.collider.name);
-        switch (collision.collider.name)
+        print(collision.name);
+        switch (collision.name)
         {
             case "Cyber_Gem":
                 text.text = "Une gemme cybernétique ! Elle me sera certainement utile.";
@@ -47,4 +48,5 @@ public class PopupManager : MonoBehaviour
                 break;
         }
     }
+       
 }

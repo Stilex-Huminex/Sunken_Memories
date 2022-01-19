@@ -13,7 +13,7 @@ public class PickupObject : MonoBehaviour
     
     private void Start()
     {
-        if (PlayerPrefs.GetInt(gameObject.name) == 1)
+        if (PlayerPrefs.GetInt(gameObject.name) ==1 )
         {
             gameObject.SetActive(false);
             barrier.SetActive(false);
@@ -32,14 +32,16 @@ public class PickupObject : MonoBehaviour
         barrier.SetActive(false);
         gameObject.SetActive(false);
     }
-    private void OnCollisionStay(Collision collisionInfo)
+
+    private void OnTriggerEnter(Collider collisionInfo)
     {
         if (!collisionInfo.gameObject.name.Equals("Player")) return;
         _canPickup = true;
     }
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
         if (!other.gameObject.name.Equals("Player")) return;
         _canPickup = false;
     }
+
 }
