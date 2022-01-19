@@ -14,17 +14,20 @@ public class PickupObject : MonoBehaviour
     
     private void Start()
     {
-        if (final) return;
-        if (PlayerPrefs.GetInt(gameObject.name) == 1)
+        _startY = transform.position.y;
+        if (final && PlayerPrefs.GetInt(gameObject.name + "_done") != 1)
         {
             gameObject.SetActive(false);
-            barrier.SetActive(false);
+            return;
         }
-        _startY = transform.position.y;
+        if (PlayerPrefs.GetInt(gameObject.name) != 1) return;
+        gameObject.SetActive(false);
+        barrier.SetActive(false);
     }
 
     public void Update()
     {
+        print(_startY);
         var pos = transform.position;
         transform.Rotate(Vector3.up, 30f*Time.deltaTime, Space.World);
         transform.position = new Vector3(pos.x, _startY + (float) Math.Sin(Time.time*2f)/5f, pos.z);
