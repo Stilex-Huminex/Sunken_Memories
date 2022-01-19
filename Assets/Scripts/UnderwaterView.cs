@@ -30,7 +30,7 @@ public class UnderwaterView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cameraPlayer.transform.position.y < 576 || cameraSubmarine.transform.position.y < 576)
+        if(cameraPlayer.transform.position.y < 576 || cameraSubmarine.transform.position.y < 576 && !cameraPlayer.activeSelf)
         {
             downWater.SetActive(true);
             postWater.SetActive(true);

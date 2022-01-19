@@ -103,9 +103,9 @@ public class SubControlOcean : MonoBehaviour
                 mouseDistance.x = (lookInput.x - screenCenter.x) / screenCenter.y;
                 mouseDistance.y = (lookInput.y - screenCenter.y) / screenCenter.y;
             }
-            if(transform.position.y >= 576)
+            if(transform.position.y >= 600)
             {
-                transform.position = new Vector3(transform.position.x, 576, transform.position.z);
+                transform.position = new Vector3(transform.position.x, 600, transform.position.z);
             }
             transform.Rotate(-mouseDistance.y * lookRateSpeed * Time.deltaTime, 0, 0, Space.Self);
             //transform.Rotate(0, mouseDistance.x * lookRateSpeed * Time.deltaTime, 0, Space.Self);
