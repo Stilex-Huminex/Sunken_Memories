@@ -50,7 +50,7 @@ public class PopupManager : MonoBehaviour
             case "Plage":
                 text.text = "Mon sous marin a fini dans l'eau ! Je vais vérifier s'il est toujours en état de marche.";
                 collision.enabled = false;
-                popupTimer = 7;
+                popupTimer = 6;
                 break;
             default:
                 popup.SetActive(false);
