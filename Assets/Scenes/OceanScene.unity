@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d0abdd05e035f429d76f627bb9d6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toLoad: MossyTunel
+  toLoad: MossyTunnel
 --- !u!1001 &20681454
 PrefabInstance:
   m_ObjectHideFlags: 0
