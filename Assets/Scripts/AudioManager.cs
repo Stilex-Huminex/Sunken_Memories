@@ -17,9 +17,9 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         Instance = this;
         SceneManager.sceneLoaded += OnLoad;
-        DontDestroyOnLoad(gameObject);
     }
 
     private void PlayTrack(string inputName)
@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
             }
         }
         if (loopClip == null) return;
+        source.time = 0;
 
         if (introClip != null)
         {
@@ -63,7 +64,9 @@ public class AudioManager : MonoBehaviour
 
     private static void OnLoad(Scene scene , LoadSceneMode mode)
     {
+        print(scene.name);
         var name = scene.name;
+        PlayerPrefs.SetString("PreviousArea", PlayerPrefs.GetString("LastArea", "zob"));
         PlayerPrefs.SetString("LastArea", name);
         Instance.PlayTrack(name);
     }
